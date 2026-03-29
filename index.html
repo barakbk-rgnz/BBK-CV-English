@@ -230,18 +230,16 @@
         }
 
         .tl-company-logo {
-            height: 28px;
+            height: 24px;
             width: auto;
             max-width: 100px;
             object-fit: contain;
             flex-shrink: 0;
+            background: #ffffff;
+            padding: 4px 10px;
+            border-radius: 8px;
         }
 
-        /* Theme-aware logos: show/hide based on theme */
-        .logo-for-dark { display: none; }
-        .logo-for-light { display: block; }
-        [data-theme="dark"] .logo-for-dark { display: block; }
-        [data-theme="dark"] .logo-for-light { display: none; }
 
         .tl-meta {
             display: flex;
@@ -326,16 +324,17 @@
         .tech-card:hover { border-color: var(--border-hover); transform: translateY(-2px); }
 
         .tech-icon {
-            width: 44px; height: 44px;
-            border-radius: 10px;
-            background: var(--accent-soft);
+            width: 52px; height: 52px;
+            border-radius: 12px;
+            background: #ffffff;
             display: flex;
             align-items: center;
             justify-content: center;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
         }
 
         .tech-logo {
-            width: 30px; height: 30px;
+            width: 36px; height: 36px;
             object-fit: contain;
         }
 
@@ -501,8 +500,7 @@
                     <!-- Investing.com -->
                     <div class="timeline-item">
                         <div class="tl-header">
-                            <img src="logos/investing.webp" alt="Investing.com" class="tl-company-logo logo-for-light" style="filter: brightness(0);">
-                            <img src="logos/investing.webp" alt="Investing.com" class="tl-company-logo logo-for-dark">
+                            <img src="logos/investing.webp" alt="Investing.com" class="tl-company-logo" style="filter: brightness(0);">
                             <div class="tl-meta" style="flex:1;">
                                 <span class="tl-company">Investing.com</span>
                                 <span class="tl-date">2016 - 2020</span>
@@ -585,12 +583,12 @@
                 </div>
                 <div class="tech-grid">
                     <div class="tech-card">
-                        <div class="tech-icon"><img src="logos/snowflake.png" class="tech-logo" alt="Snowflake"></div>
+                        <div class="tech-icon"><img src="https://cdn.simpleicons.org/snowflake/29B5E8" class="tech-logo" alt="Snowflake"></div>
                         <span class="tech-label">Snowflake</span>
                         <span class="tech-sub">Data Architecture</span>
                     </div>
                     <div class="tech-card">
-                        <div class="tech-icon"><img src="logos/tableau.png" class="tech-logo" alt="Tableau"></div>
+                        <div class="tech-icon"><img src="https://cdn.simpleicons.org/tableau/E97627" class="tech-logo" alt="Tableau"></div>
                         <span class="tech-label">Tableau</span>
                         <span class="tech-sub">Decision Intelligence</span>
                     </div>
@@ -610,27 +608,27 @@
                         <span class="tech-sub">AI Development</span>
                     </div>
                     <div class="tech-card">
-                        <div class="tech-icon"><img src="logos/figma.png" class="tech-logo" alt="Figma"></div>
+                        <div class="tech-icon"><img src="https://cdn.simpleicons.org/figma/F24E1E" class="tech-logo" alt="Figma"></div>
                         <span class="tech-label">Figma</span>
                         <span class="tech-sub">Mockups</span>
                     </div>
                     <div class="tech-card">
-                        <div class="tech-icon"><img src="logos/gcp.png" class="tech-logo" alt="Google Cloud"></div>
+                        <div class="tech-icon"><img src="https://cdn.simpleicons.org/googlecloud/4285F4" class="tech-logo" alt="Google Cloud"></div>
                         <span class="tech-label">GCP</span>
                         <span class="tech-sub">Cloud Environments</span>
                     </div>
                     <div class="tech-card">
-                        <div class="tech-icon"><img src="logos/aws.png" class="tech-logo" alt="AWS"></div>
+                        <div class="tech-icon"><img src="https://cdn.simpleicons.org/amazonwebservices/FF9900" class="tech-logo" alt="AWS"></div>
                         <span class="tech-label">AWS</span>
                         <span class="tech-sub">Cloud Environments</span>
                     </div>
                     <div class="tech-card">
-                        <div class="tech-icon"><img src="logos/github.png" class="tech-logo" alt="GitHub"></div>
+                        <div class="tech-icon"><img src="https://cdn.simpleicons.org/github/181717" class="tech-logo" alt="GitHub"></div>
                         <span class="tech-label">GitHub</span>
                         <span class="tech-sub">Engineering Excellence</span>
                     </div>
                     <div class="tech-card">
-                        <div class="tech-icon"><img src="logos/jira.png" class="tech-logo" alt="Jira"></div>
+                        <div class="tech-icon"><img src="https://cdn.simpleicons.org/jira/0052CC" class="tech-logo" alt="Jira"></div>
                         <span class="tech-label">Jira</span>
                         <span class="tech-sub">Agile Delivery</span>
                     </div>
@@ -660,11 +658,4 @@
 
     document.getElementById('printBtn').addEventListener('click', () => window.print());
 
-    const obs = new IntersectionObserver((entries) => {
-        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.08 });
-    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
-</script>
-
-</body>
-</html>
+    const obs = new IntersectionObs
