@@ -80,7 +80,72 @@
             .tl{padding-left:0}.tl::before{display:none}.tli::before{display:none}.tli:hover{transform:none}
             .topbar{top:14px;right:14px}.tbtn{width:42px;height:42px}
         }
-        @media print{.topbar,.amb{display:none!important}body{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}.side{position:relative;top:0}.tli:hover,.tc:hover{transform:none;box-shadow:none}}
+@media print {
+    @page { size: A4; margin: 12mm 14mm; }
+    .topbar, .amb, body::before { display: none !important; }
+    body { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    
+    /* Layout */
+    .cvl { gap: 20px; padding: 16px 0 12px; }
+    .side { position: relative; top: 0; }
+    .sphoto { width: 90px; height: 90px; margin-bottom: 10px; }
+    .sname { font-size: 1.2rem; }
+    .stitle { font-size: 0.8rem; margin-bottom: 12px; }
+    .ssec { margin-bottom: 12px; }
+    .slbl { font-size: 0.6rem; margin-bottom: 4px; }
+    .slnk { font-size: 0.72rem; margin-bottom: 5px; }
+    .lnm { font-size: 0.75rem; }
+    .llv { font-size: 0.65rem; }
+    
+    /* Sections */
+    .sec { margin-bottom: 14px; }
+    .sh { margin-bottom: 10px; }
+    .st { font-size: 1.1rem; }
+    .abt { font-size: 0.78rem; line-height: 1.5; padding: 10px 14px; }
+    
+    /* Timeline */
+    .tl { padding-left: 0; }
+    .tl::before { display: none; }
+    .tli::before { display: none; }
+    .tli { margin-bottom: 8px; padding: 8px 12px; }
+    .tli:hover { transform: none; box-shadow: none; }
+    .tlc { font-size: 0.9rem; }
+    .tld { font-size: 0.65rem; }
+    .tlr { font-size: 0.78rem; margin-bottom: 2px; }
+    .tll { font-size: 0.65rem; margin-bottom: 4px; }
+    .tlb li { font-size: 0.72rem; line-height: 1.4; margin-bottom: 2px; }
+    .clogo { height: 16px; padding: 2px 6px; }
+    
+    /* Skills */
+    .skw { gap: 5px; }
+    .sp { padding: 3px 10px; font-size: 0.68rem; }
+    
+    /* Education */
+    .eg { gap: 8px; }
+    .ec { padding: 8px 10px; }
+    .ei { font-size: 0.8rem; }
+    .ed { font-size: 0.7rem; }
+    .ey { font-size: 0.6rem; }
+    
+    /* Tech stack */
+    .tg { gap: 6px; }
+    .tc { padding: 8px 6px; gap: 4px; }
+    .tc:hover { transform: none; }
+    .tc img { height: 28px !important; width: 28px !important; }
+    [data-theme="dark"] .tc img { padding: 3px; }
+    .tn { font-size: 0.68rem; }
+    .ts { font-size: 0.55rem; }
+    
+    /* Footer */
+    .ft { padding: 10px 0; font-size: 0.6rem; }
+    
+    /* Prevent cuts */
+    .tli, .ec, .tc { page-break-inside: avoid; }
+    .sec { page-break-inside: avoid; }
+    
+    /* Show animations */
+    .fi { opacity: 1 !important; transform: none !important; }
+}
     </style>
 </head>
 <body data-theme="dark">
