@@ -85,66 +85,68 @@
     .topbar, .amb, body::before { display: none !important; }
     body { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
     
-    /* Layout */
-    .cvl { gap: 20px; padding: 16px 0 12px; }
-    .side { position: relative; top: 0; }
-    .sphoto { width: 90px; height: 90px; margin-bottom: 10px; }
-    .sname { font-size: 1.2rem; }
-    .stitle { font-size: 0.8rem; margin-bottom: 12px; }
-    .ssec { margin-bottom: 12px; }
-    .slbl { font-size: 0.6rem; margin-bottom: 4px; }
-    .slnk { font-size: 0.72rem; margin-bottom: 5px; }
-    .lnm { font-size: 0.75rem; }
-    .llv { font-size: 0.65rem; }
+    /* Collapse sidebar to horizontal header */
+    .cvl { display: block; padding: 0; }
+    .side { position: relative; top: 0; display: flex; align-items: center; gap: 16px; margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid #ddd; }
+    .sphoto { width: 60px; height: 60px; margin-bottom: 0; }
+    .sname { font-size: 1.1rem; }
+    .stitle { font-size: 0.75rem; margin-bottom: 4px; }
+    .ssec { margin-bottom: 0; margin-left: 12px; }
+    .slbl { font-size: 0.55rem; margin-bottom: 2px; }
+    .slnk { font-size: 0.68rem; margin-bottom: 3px; }
+    .slnk svg { width: 12px; height: 12px; }
+    .lent { margin-bottom: 2px; }
+    .lnm { font-size: 0.7rem; }
+    .llv { font-size: 0.6rem; }
     
     /* Sections */
-    .sec { margin-bottom: 14px; }
-    .sh { margin-bottom: 10px; }
-    .st { font-size: 1.1rem; }
-    .abt { font-size: 0.78rem; line-height: 1.5; padding: 10px 14px; }
+    .sec { margin-bottom: 10px; }
+    .sh { margin-bottom: 8px; }
+    .sd { width: 6px; height: 6px; }
+    .st { font-size: 1rem; }
+    .abt { font-size: 0.72rem; line-height: 1.45; padding: 8px 12px; }
     
     /* Timeline */
     .tl { padding-left: 0; }
     .tl::before { display: none; }
     .tli::before { display: none; }
-    .tli { margin-bottom: 8px; padding: 8px 12px; }
+    .tli { margin-bottom: 6px; padding: 7px 10px; }
     .tli:hover { transform: none; box-shadow: none; }
-    .tlc { font-size: 0.9rem; }
-    .tld { font-size: 0.65rem; }
-    .tlr { font-size: 0.78rem; margin-bottom: 2px; }
-    .tll { font-size: 0.65rem; margin-bottom: 4px; }
-    .tlb li { font-size: 0.72rem; line-height: 1.4; margin-bottom: 2px; }
-    .clogo { height: 16px; padding: 2px 6px; }
+    .tlc { font-size: 0.85rem; }
+    .tld { font-size: 0.6rem; }
+    .tlr { font-size: 0.72rem; margin-bottom: 1px; }
+    .tll { font-size: 0.6rem; margin-bottom: 3px; }
+    .tlb li { font-size: 0.68rem; line-height: 1.35; margin-bottom: 1px; }
+    .clogo { height: 14px; padding: 2px 4px; }
     
     /* Skills */
-    .skw { gap: 5px; }
-    .sp { padding: 3px 10px; font-size: 0.68rem; }
+    .skw { gap: 4px; }
+    .sp { padding: 2px 8px; font-size: 0.62rem; }
     
     /* Education */
-    .eg { gap: 8px; }
-    .ec { padding: 8px 10px; }
-    .ei { font-size: 0.8rem; }
-    .ed { font-size: 0.7rem; }
-    .ey { font-size: 0.6rem; }
+    .eg { gap: 6px; }
+    .ec { padding: 6px 8px; }
+    .ei { font-size: 0.75rem; }
+    .ed { font-size: 0.65rem; }
+    .ey { font-size: 0.55rem; }
     
     /* Tech stack */
-    .tg { gap: 6px; }
-    .tc { padding: 8px 6px; gap: 4px; }
+    .tg { gap: 5px; grid-template-columns: repeat(5, 1fr); }
+    .tc { padding: 6px 4px; gap: 3px; }
     .tc:hover { transform: none; }
-    .tc img { height: 28px !important; width: 28px !important; }
-    [data-theme="dark"] .tc img { padding: 3px; }
-    .tn { font-size: 0.68rem; }
-    .ts { font-size: 0.55rem; }
+    .tc img { height: 24px !important; width: 24px !important; }
+    [data-theme="dark"] .tc img { padding: 2px; }
+    .tn { font-size: 0.6rem; }
+    .ts { font-size: 0.5rem; }
     
     /* Footer */
-    .ft { padding: 10px 0; font-size: 0.6rem; }
+    .ft { padding: 8px 0; font-size: 0.55rem; }
     
     /* Prevent cuts */
     .tli, .ec, .tc { page-break-inside: avoid; }
     .sec { page-break-inside: avoid; }
-    
-    /* Show animations */
     .fi { opacity: 1 !important; transform: none !important; }
+}
 }
     </style>
 </head>
